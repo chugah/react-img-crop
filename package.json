@@ -1,0 +1,33 @@
+{
+  "name": "crop_img",
+  "version": "1.0.0",
+  "description": "crop image",
+  "main": "src/index.js",
+  "dependencies": {
+    "clsx": "^1.0.4",
+    "core-js": "^3.1.4",
+    "prop-types": "^15.7.2",
+    "react": "16.5.0",
+    "react-dom": "16.5.0",
+    "react-scripts": "^3.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
