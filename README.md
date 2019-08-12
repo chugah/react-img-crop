@@ -8,7 +8,7 @@ This application will perform the following events on the client:
 4. The rectangle disappears when mouse is released
 5. The app generates and displays the crop image beneath original image
 
-The application developed using create react app.
+The application was developed using create react app.
 
 To run the application, perform the following steps:
 
