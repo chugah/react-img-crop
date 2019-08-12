@@ -1,3 +1,13 @@
+/*
+  Provides the following functions to support CropImage:
+  - Get the coordinates of crop guides (getCoordinates)
+  - Provides the values for crop guide coordinates (getCoordinateValues)
+  - Checks to ensure crop guides are within image boundares (isCropValid)
+  - Allows ability to move crop area around image (containCrop)
+  - Gets the size of the crop area in units of px (convertCropToPixel)
+  - Generates the cropped image based on the crop guides (cropAspect)
+*/
+
 export const getCoordinates = (event) => {
   let pageX;
   let pageY;
@@ -37,7 +47,7 @@ export const cropAspect = (crop, imageWidth, imageHeight) => {
   if (crop.height) {
     completeCrop.width = completeCrop.height * crop.aspect;
   }
-  
+
   return completeCrop;
 }
 

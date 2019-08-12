@@ -1,3 +1,7 @@
+/*
+  Defines prop types and default props for CropImage
+*/
+
 import PropTypes from 'prop-types';
 
 export const cropImgPropTypes = {

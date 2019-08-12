@@ -1,3 +1,17 @@
+/*
+  This file is the workhorse of the application.
+  It handles and tracks all the mouse movement of the crop guides
+  and generates the image copy of the area selected to crop.
+
+  Once a copy of the image is loaded via onImageLoad, all the MouseDown
+  functions monitor the image area contained in the crop guides. MouseMove
+  keeps a record of the crop guide location while MouseUp and MouseLeave stop
+  recording and remove crop guide respectively.
+
+  There are also a series of functions to track the crop guide/area. The
+  majority of these functions are prefixed with 'get'. 
+*/
+
 import React, { PureComponent } from 'react';
 import clsx from 'clsx';
 import { convertCropToPixel, containCrop, cropAspect, getCoordinates, getCoordinateValues, isCropValid, resolveCrop } from './CropHelper';
@@ -409,7 +423,6 @@ class CropImage extends PureComponent {
       'CropImage--active': cropIsActive,
       'CropImage--new-crop': newCropIsBeingDrawn,
       'CropImage--fixed-aspect': crop && crop.aspect,
-      // In this case we have to shadow the image, since the box-shadow on the crop won't work.
       'CropImage--crop-invisible': crop && cropIsActive && (!crop.width || !crop.height),
     });
 

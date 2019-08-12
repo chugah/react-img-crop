@@ -1,3 +1,13 @@
+/*
+  Entry point into the application and handles the following actions:
+  - Provides ability to upload an image (onFileSelected)
+  - Renders image on the client (onImageLoaded)
+  - Creates a copy of the image (getCroppedImg)
+  - Crop guides appear on original image to select a given area (getCroppedImg)
+  - Registers changes to area being selected to crop (onCropChange)
+  - Image copy modified to only show selected area (onCropComplete)
+*/
+
 import ReactDOM from 'react-dom';
 import React, { PureComponent } from 'react';
 import CropImage from './CropImage';
